@@ -1,0 +1,25 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<g:HTMLPanel>
+		<b:FluidRow>
+			<b:PageHeader subtext="List all books">Books</b:PageHeader>
+		</b:FluidRow>
+		<b:FluidRow>
+			<b:Alert heading="Warning." type="ERROR" b:visible="false"
+				ui:field="error" close="false"></b:Alert>
+		</b:FluidRow>
+		<b:FluidRow>
+			<b:Column size="12">
+				<g:HTMLPanel>
+					<b:Heading size="2">List</b:Heading>
+					<g:HTMLPanel ui:field="listDiv" />
+				</g:HTMLPanel>
+			</b:Column>
+		</b:FluidRow>
+		<b:FluidRow>
+			<b:Column size="12">
+				<g:SimplePanel ui:field="editBookPanel" />				
+			</b:Column>
+		</b:FluidRow>
+	</g:HTMLPanel>
+</ui:UiBinder>

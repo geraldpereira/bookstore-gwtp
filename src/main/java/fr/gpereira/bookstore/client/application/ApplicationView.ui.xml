@@ -1,0 +1,17 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+    xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:npui="urn:import:fr.gpereira.bookstore.client.application.ui">
+	
+	<g:HTMLPanel>
+		<npui:MainMenu />
+		<div ui:field="loadingDiv">
+			<b:FluidContainer>
+            	<b:ProgressBar type="ANIMATED" percent="100" />
+            </b:FluidContainer>
+        </div>		
+		<b:FluidContainer>
+			<g:SimplePanel ui:field="mainContentPanel"/>
+		</b:FluidContainer>
+	</g:HTMLPanel>
+</ui:UiBinder>

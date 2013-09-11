@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module rename-to='project'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name="com.google.gwt.editor.Editor" />
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name='com.google.gwt.inject.Inject' />
+
+	<inherits name='fr.gpereira.bookstore.Model' />	
+	
+	<!-- Default css -->
+	<inherits name='com.google.gwt.user.theme.standard.Standard' />
+
+	<!-- Other module inherits -->
+	<inherits name='com.gwtplatform.dispatch.Dispatch' />
+	<inherits name='com.gwtplatform.mvp.MvpWithEntryPoint' />
+	<!-- <inherits name='com.gwtplatform.mvp.Mvp'/>
+	<entry-point class='fr.gpereira.bookstore.client.ClientEntryPoint'/> -->
+
+	<!-- Guava -->
+	<inherits name='com.google.common.base.Base' />
+	<!-- RestyGWT -->
+	<inherits name="org.fusesource.restygwt.RestyGWT" />
+
+	<!-- inherit the GWT-Bootstrap widget library -->
+	<inherits name="com.github.gwtbootstrap.Bootstrap" />
+	<inherits name='com.github.gwtbootstrap.datepicker.Datepicker' />
+	<!-- end of inherit the GWT-Bootstrap datepicker library -->
+	<set-property name="bootstrap.responsiveDesign" value="true"/>	
+
+
+	<inherits name="org.hibernate.validator.HibernateValidator" />
+	<replace-with
+		class="fr.gpereira.bookstore.client.validation.ValidatorFactory">
+		<when-type-is class="javax.validation.ValidatorFactory" />
+	</replace-with>
+
+	<source path='client' />
+	<source path='shared' />
+
+	<set-configuration-property name="gin.ginjector.modules"
+		value="fr.gpereira.bookstore.client.gin.ClientModule" />
+</module>
